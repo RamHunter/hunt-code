@@ -2,7 +2,6 @@
   <div class="dropdown">
     <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="themeDropdown" data-bs-toggle="dropdown"
       aria-expanded="false">
-      <!-- <i class="bi" [ngClass]="'bi-' + themes.find(t => t.value === currentTheme())?.icon"></i> -->
       <i class="bi" [ngClass]="currentThemeIcon"></i>
       {{ currentThemeLabel }} Theme
     </button>
@@ -19,7 +18,6 @@
     </ul>
   </div>
 
-  <!-- Alternative: Theme buttons -->
   <div class="btn-group theme-buttons mt-3">
     @for (theme of themes; track theme.value) {
     <button type="button" class="btn" [class.btn-primary]="currentTheme() === theme.value"
