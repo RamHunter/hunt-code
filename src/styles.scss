@@ -1,11 +1,11 @@
-/* Import Bootstrap */
-@use 'bootstrap/scss/bootstrap';
+/* Use modern Sass imports */
+@use 'bootstrap/scss/bootstrap' as bootstrap;
+@use 'bootstrap-icons/font/bootstrap-icons.css' as bootstrap-icons;
 
-/* Import Bootstrap Icons */
-@use 'bootstrap-icons/font/bootstrap-icons';
 
-/* Import custom themes */
-@use '../public/styles/themes.scss';
+/* Import custom themes and font sizes */
+@use 'src/styles/themes.scss';
+@use 'src/styles/font-sizes.scss';
 
 /* Apply theme variables to elements */
 body {
@@ -30,3 +30,4 @@ body {
 }
 
 /* Add more component overrides as needed */
+

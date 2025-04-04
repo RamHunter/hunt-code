@@ -1,0 +1,72 @@
+// Define the base font size variable
+:root {
+    --base-font-size: 1rem; // Default (medium)
+  }
+  
+  // Apply font size classes
+  .font-small {
+    --base-font-size: 0.875rem; // 14px
+  }
+  
+  .font-medium {
+    --base-font-size: 1rem; // 16px
+  }
+  
+  .font-large {
+    --base-font-size: 1.125rem; // 18px
+  }
+  
+  .font-x-large {
+    --base-font-size: 1.25rem; // 20px
+  }
+  
+  // Apply the font size to elements
+  html {
+    font-size: var(--base-font-size);
+  }
+  
+  // Scale specific elements proportionally
+  h1 {
+    font-size: calc(var(--base-font-size) * 2.5);
+  }
+  
+  h2 {
+    font-size: calc(var(--base-font-size) * 2);
+  }
+  
+  h3 {
+    font-size: calc(var(--base-font-size) * 1.75);
+  }
+  
+  h4 {
+    font-size: calc(var(--base-font-size) * 1.5);
+  }
+  
+  h5 {
+    font-size: calc(var(--base-font-size) * 1.25);
+  }
+  
+  h6 {
+    font-size: calc(var(--base-font-size) * 1.1);
+  }
+  
+  .small {
+    font-size: calc(var(--base-font-size) * 0.875);
+  }
+  
+  .lead {
+    font-size: calc(var(--base-font-size) * 1.25);
+  }
+  
+  // Adjust Bootstrap components
+  .btn {
+    font-size: var(--base-font-size);
+  }
+  
+  .dropdown-menu {
+    font-size: var(--base-font-size);
+  }
+  
+  .form-control {
+    font-size: var(--base-font-size);
+  }

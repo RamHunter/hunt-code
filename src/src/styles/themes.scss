@@ -1,0 +1,80 @@
+/* Theme variables */
+:root {
+    /* Light theme (default) */
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --background-color: #ffffff;
+    --text-color: #212529;
+    --border-color: #dee2e6;
+    --accent-color: #0dcaf0;
+  }
+  
+  /* Dark theme */
+  .theme-dark {
+    --primary-color: #3e3e3e;
+    --secondary-color: #6c757d;
+    --background-color: #212529;
+    --text-color: #f8f9fa;
+    --border-color: #495057;
+    --accent-color: #6c757d;
+    
+    /* Override Bootstrap variables */
+    --bs-primary: var(--primary-color);
+    --bs-primary-rgb: rgba(43, 48, 53, 1);
+    --bg-primary: rgba(43, 48, 53, 1) !important;
+    --bs-body-bg: var(--background-color);
+    --bs-body-color: var(--text-color);
+    --bs-border-color: var(--border-color);
+  }
+  
+  /* Blue theme */
+  .theme-blue {
+    --primary-color: #0066cc;
+    --secondary-color: #5c88c6;
+    --background-color: #f0f8ff;
+    --text-color: #00264d;
+    --border-color: #b8d3ff;
+    --accent-color: #00a8e8;
+    
+    /* Override Bootstrap variables */
+    --bs-primary: var(--primary-color);
+    --bs-primary-rgb: 0, 102, 204;
+    --bs-body-bg: var(--background-color);
+    --bs-body-color: var(--text-color);
+    --bs-border-color: var(--border-color);
+  }
+  
+  /* Green theme */
+  .theme-green {
+    --primary-color: #198754;
+    --secondary-color: #5cb85c;
+    --background-color: #f0fff4;
+    --text-color: #0a3622;
+    --border-color: #c3e6cb;
+    --accent-color: #20c997;
+    
+    /* Override Bootstrap variables */
+    --bs-primary: var(--primary-color);
+    --bs-primary-rgb: 25, 135, 84;
+    --bs-body-bg: var(--background-color);
+    --bs-body-color: var(--text-color);
+    --bs-border-color: var(--border-color);
+  }
+  
+  /* Purple theme */
+  .theme-purple {
+    --primary-color: #6f42c1;
+    --secondary-color: #9966cc;
+    --background-color: #f8f0ff;
+    --text-color: #3a1f5d;
+    --border-color: #d8c3ff;
+    --accent-color: #e83e8c;
+    
+    /* Override Bootstrap variables */
+    --bs-primary: var(--primary-color);
+    --bs-primary-rgb: 111, 66, 193;
+    --bs-body-bg: var(--background-color);
+    --bs-body-color: var(--text-color);
+    --bs-border-color: var(--border-color);
+  }
+  

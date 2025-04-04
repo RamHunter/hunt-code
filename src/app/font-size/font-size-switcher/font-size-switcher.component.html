@@ -1,0 +1,38 @@
+<div class="font-size-switcher">
+    <div class="dropdown">
+      <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi" [ngClass]="getCurrentFontSizeIcon()"></i>
+        {{ getCurrentFontSizeLabel() }} Text
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="fontSizeDropdown">
+        @for (fontSize of fontSizes; track fontSize.value) {
+          <li>
+            <button 
+              class="dropdown-item" 
+              [class.active]="currentFontSize() === fontSize.value"
+              (click)="changeFontSize(fontSize.value)">
+              <i class="bi" [ngClass]="getFontSizeIcon(fontSize)"></i>
+              {{ fontSize.label }}
+            </button>
+          </li>
+        }
+      </ul>
+    </div>
+    
+    <!-- Alternative: Font size buttons -->
+    <div class="btn-group font-size-buttons mt-3">
+      @for (fontSize of fontSizes; track fontSize.value) {
+        <button 
+          type="button" 
+          class="btn" 
+          [class.btn-primary]="currentFontSize() === fontSize.value"
+          [class.btn-outline-secondary]="currentFontSize() !== fontSize.value"
+          (click)="changeFontSize(fontSize.value)"
+          [attr.aria-label]="'Switch to ' + fontSize.label + ' font size'">
+          <i class="bi" [ngClass]="getFontSizeIcon(fontSize)"></i>
+        </button>
+      }
+    </div>
+  </div>
+  
+  

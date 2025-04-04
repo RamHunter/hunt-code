@@ -1,30 +1,37 @@
 <div class="theme-switcher">
   <div class="dropdown">
-    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="themeDropdown" data-bs-toggle="dropdown"
-      aria-expanded="false">
-      <i class="bi" [ngClass]="currentThemeIcon"></i>
-      {{ currentThemeLabel }} Theme
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="themeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi" [ngClass]="getCurrentThemeIcon()"></i>
+      {{ getCurrentThemeLabel() }} Theme
     </button>
     <ul class="dropdown-menu" aria-labelledby="themeDropdown">
       @for (theme of themes; track theme.value) {
-      <li>
-        <button class="dropdown-item" [class.active]="currentTheme() === theme.value"
-          (click)="changeTheme(theme.value)">
-          <i class="bi" [ngClass]="'bi-' + theme.icon"></i>
-          {{ theme.label }}
-        </button>
-      </li>
+        <li>
+          <button 
+            class="dropdown-item" 
+            [class.active]="currentTheme() === theme.value"
+            (click)="changeTheme(theme.value)">
+            <i class="bi" [ngClass]="getThemeIcon(theme)"></i>
+            {{ theme.label }}
+          </button>
+        </li>
       }
     </ul>
   </div>
-
+  
+  <!-- Alternative: Theme buttons -->
   <div class="btn-group theme-buttons mt-3">
     @for (theme of themes; track theme.value) {
-    <button type="button" class="btn" [class.btn-primary]="currentTheme() === theme.value"
-      [class.btn-outline-secondary]="currentTheme() !== theme.value" (click)="changeTheme(theme.value)"
-      [attr.aria-label]="'Switch to ' + theme.label + ' theme'">
-      <i class="bi" [ngClass]="'bi-' + theme.icon"></i>
-    </button>
+      <button 
+        type="button" 
+        class="btn" 
+        [class.btn-primary]="currentTheme() === theme.value"
+        [class.btn-outline-secondary]="currentTheme() !== theme.value"
+        (click)="changeTheme(theme.value)"
+        [attr.aria-label]="'Switch to ' + theme.label + ' theme'">
+        <i class="bi" [ngClass]="getThemeIcon(theme)"></i>
+      </button>
     }
   </div>
 </div>
+
