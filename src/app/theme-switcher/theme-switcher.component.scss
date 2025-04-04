@@ -1,0 +1,11 @@
+.theme-switcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .theme-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+  

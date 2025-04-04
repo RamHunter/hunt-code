@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import Bootstrap */
+@use 'bootstrap/scss/bootstrap';
+
+/* Import Bootstrap Icons */
+@use 'bootstrap-icons/font/bootstrap-icons';
+
+/* Import custom themes */
+@use '../public/styles/themes.scss';
+
+/* Apply theme variables to elements */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card, .modal-content, .dropdown-menu {
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/* Add more component overrides as needed */
