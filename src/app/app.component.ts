@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
+import { RouterOutlet, type Event} from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FontSizeSwitcherComponent } from './font-size/font-size-switcher/font-size-switcher.component';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet, ThemeSwitcherComponent, FontSizeSwitcherComponent],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
